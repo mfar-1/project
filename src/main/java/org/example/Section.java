@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section {
+
     private String name;
     private boolean enabled;
     private List<Book> books;
@@ -31,11 +32,18 @@ public class Section {
     }
 
     public void addBook(Book book) {
-        books.add(book);
+        if (book != null) {
+            books.add(book);
+        }
+    }
+
+    public void clearBooks() {
+        books.clear();
+        System.out.println("All books have been removed from section: " + name);
     }
 
     @Override
     public String toString() {
-        return "Section: " + name + "(Enabled: " + enabled + ")";
+        return "Section: " + name + " (Enabled: " + enabled + ")";
     }
 }
