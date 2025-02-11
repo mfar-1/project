@@ -1,11 +1,5 @@
-package org.example;
+package org.example.service;
 
-import db.DataSource;
-import entity.User;
-import java.io.IOException;
-import java.util.UUID;
-
-import static db.DataSource.*;
 public class AuthService {
     AdminService adminService= new AdminService();
     UserService userService = new UserService();
